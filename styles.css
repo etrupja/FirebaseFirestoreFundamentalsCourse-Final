@@ -1,0 +1,19 @@
+#dashboard{
+    margin: 30px;
+}
+.table{
+    margin-top: 30px;
+}
+
+.studentForm{
+    margin: 20 80 80 80px;
+    display: none;
+}
+
+.dropdown-toggle::after {
+    display: none;
+}
+
+div.dropdown-menu a{
+    cursor: pointer;
+} 
