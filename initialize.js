@@ -1,8 +1,8 @@
         // Initialize Cloud Firestore through Firebase
         var db = firebase.firestore();
-        var studentsRef = db.collection("students");
+        var employeesRef = db.collection("employees");
 
-        studentsRef.doc("etr@gmail.com").set({
+        employeesRef.doc("etr@gmail.com").set({
             fName: "Ervis", 
             lName: "Trupja", 
             email: "etr@gmail.com",
@@ -11,7 +11,7 @@
             average: 4.9,
             isFullTime: true,
         });
-        studentsRef.doc("str@gmail.com").set({
+        employeesRef.doc("str@gmail.com").set({
             fName: "Suada", 
             lName: "Trupja", 
             email: "str@gmail.com",
@@ -20,7 +20,7 @@
             average: 5.0,
             isFullTime: false,
         });
-        studentsRef.doc("ert@gmail.com").set({
+        employeesRef.doc("ert@gmail.com").set({
             fName: "Ermal", 
             lName: "Trupja", 
             email: "ert@gmail.com",
@@ -29,7 +29,7 @@
             average: 4.0,
             isFullTime: false,
         });
-        studentsRef.doc("otr@gmail.com").set({
+        employeesRef.doc("otr@gmail.com").set({
             fName: "Ornela", 
             lName: "Trupja", 
             email: "otr@gmail.com",
@@ -39,7 +39,7 @@
             isFullTime: false,
         });
 
-        studentsRef.doc("a@gmail.com").set({
+        employeesRef.doc("a@gmail.com").set({
             fName: "Ervis", 
             lName: "Trupja", 
             email: "etr@gmail.com",
@@ -48,7 +48,7 @@
             average: 4.9,
             isFullTime: true,
         });
-        studentsRef.doc("b@gmail.com").set({
+        employeesRef.doc("b@gmail.com").set({
             fName: "Suada", 
             lName: "Trupja", 
             email: "str@gmail.com",
@@ -57,7 +57,7 @@
             average: 5.0,
             isFullTime: false,
         });
-        studentsRef.doc("q@gmail.com").set({
+        employeesRef.doc("q@gmail.com").set({
             fName: "Ermal", 
             lName: "Trupja", 
             email: "ert@gmail.com",
@@ -66,7 +66,7 @@
             average: 4.0,
             isFullTime: false,
         });
-        studentsRef.doc("w@gmail.com").set({
+        employeesRef.doc("w@gmail.com").set({
             fName: "Ornela", 
             lName: "Trupja", 
             email: "otr@gmail.com",
@@ -76,7 +76,7 @@
             isFullTime: false,
         });
 
-        studentsRef.doc("e@gmail.com").set({
+        employeesRef.doc("e@gmail.com").set({
             fName: "Ervis", 
             lName: "Trupja", 
             email: "etr@gmail.com",
@@ -85,7 +85,7 @@
             average: 4.9,
             isFullTime: true,
         });
-        studentsRef.doc("r@gmail.com").set({
+        employeesRef.doc("r@gmail.com").set({
             fName: "Suada", 
             lName: "Trupja", 
             email: "str@gmail.com",
@@ -94,7 +94,7 @@
             average: 5.0,
             isFullTime: false,
         });
-        studentsRef.doc("t@gmail.com").set({
+        employeesRef.doc("t@gmail.com").set({
             fName: "Ermal", 
             lName: "Trupja", 
             email: "ert@gmail.com",
@@ -103,7 +103,7 @@
             average: 4.0,
             isFullTime: false,
         });
-        studentsRef.doc("z@gmail.com").set({
+        employeesRef.doc("z@gmail.com").set({
             fName: "Ornela", 
             lName: "Trupja", 
             email: "otr@gmail.com",
@@ -113,7 +113,7 @@
             isFullTime: false,
         });
 
-        studentsRef.doc("u@gmail.com").set({
+        employeesRef.doc("u@gmail.com").set({
             fName: "Ervis", 
             lName: "Trupja", 
             email: "etr@gmail.com",
@@ -122,7 +122,7 @@
             average: 4.9,
             isFullTime: true,
         });
-        studentsRef.doc("i@gmail.com").set({
+        employeesRef.doc("i@gmail.com").set({
             fName: "Suada", 
             lName: "Trupja", 
             email: "str@gmail.com",
@@ -131,7 +131,7 @@
             average: 5.0,
             isFullTime: false,
         });
-        studentsRef.doc("o@gmail.com").set({
+        employeesRef.doc("o@gmail.com").set({
             fName: "Ermal", 
             lName: "Trupja", 
             email: "ert@gmail.com",
@@ -140,7 +140,7 @@
             average: 4.0,
             isFullTime: false,
         });
-        studentsRef.doc("p@gmail.com").set({
+        employeesRef.doc("p@gmail.com").set({
             fName: "Ornela", 
             lName: "Trupja", 
             email: "otr@gmail.com",
@@ -151,7 +151,7 @@
         });
 
 
-        db.collection("students").get().then(function(querySnapshot) {
+        db.collection("employees").get().then(function(querySnapshot) {
             var tableRow='';
             querySnapshot.forEach(function(doc) {
                 var document = doc.data();
@@ -163,8 +163,8 @@
                 tableRow += '<td>' + document.gender + '</td>';
                 tableRow += '<td>' + document.average + '</td>';
                 tableRow += '<td>' + document.isFullTime + '</td>';
-                tableRow += '<td class="editStudent"><i class="fa fa-pencil" aria-hidden="true" style="color:green"></i></td>'
-                tableRow += '<td class="deleteStudent"><i class="fa fa-trash" aria-hidden="true" style="color:red"></i></td>'
+                tableRow += '<td class="editEmployee"><i class="fa fa-pencil" aria-hidden="true" style="color:green"></i></td>'
+                tableRow += '<td class="deleteEmployee"><i class="fa fa-trash" aria-hidden="true" style="color:red"></i></td>'
                 tableRow += '</tr>';
             });
             $('tbody.tbodyData').append(tableRow);

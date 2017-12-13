@@ -42,12 +42,14 @@
     </head>
     <body>
         <div class="alert alert-primary text-center" id="dashboard" role="alert">
-             <h1> Students Dashboard </h1>
+             <h1> Employees Dashboard </h1>
         </div>
 
         <div class="container">
-                <button class="btn btn-success" id="createStudent"> 
-                    Create Student <i class="fa fa-plus" aria-hidden="true"></i>
+
+                <!-- button to create an employee -->
+                <button class="btn btn-success" id="createEmployee"> 
+                    Create Employee <i class="fa fa-plus" aria-hidden="true"></i>
                 </button>
 
                 <!-- Filters drop down -->
@@ -60,9 +62,9 @@
                     Default Filters <i class="fa fa-filter" aria-hidden="true"></i>
                     </button>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" id="onlyMalesFilter"> Only male students</a>
-                        <a class="dropdown-item" id="fullTimeFilter">  Only full time students</a>
-                        <a class="dropdown-item" id="olderThenFilter"> Students older than 23</a>
+                        <a class="dropdown-item" id="onlyMalesFilter"> Only male employees</a>
+                        <a class="dropdown-item" id="fullTimeFilter">  Only full time employees</a>
+                        <a class="dropdown-item" id="olderThenFilter"> Employees older than 23</a>
                         <a class="dropdown-item" id="ageBetweenFilter"> Between 20 and 25 years old</a>
                         <a class="dropdown-item" id="avgFilter"> Average between 4.5 and 5</a>
                         <div class="dropdown-divider"></div>
@@ -70,8 +72,11 @@
                     </div>
                 </div>
 
+                <!-- input to seach for an employee -->
+                <input class="btn btn-default  pull-right" placeholder="Search an employee..." id="searchEmployee"> </input>
+
                 <div id="creationStatus"></div>
-                <div class="studentForm">
+                <div class="employeeForm">
                                 <div class="form-row">
                                   <div class="form-group col-md-4">
                                     <label for="fname">First Name</label>
@@ -108,7 +113,7 @@
                                 <div class="form-group">
                                   <div class="form-check">
                                     <label class="form-check-label">
-                                      <input class="form-check-input" type="checkbox"> Check this if he/she is a full time student.
+                                      <input class="form-check-input" type="checkbox"> Check this if he/she is a full time employee.
                                     </label>
                                   </div>
                                 </div>
@@ -126,7 +131,7 @@
                             <th scope="col">Email</th>
                             <th scope="col">Age</th>
                             <th scope="col">Gender</th>
-                            <th scope="col">Average</th>
+                            <th scope="col">Years of experience</th>
                             <th scope="col">Full Time</th>
                             <th scope="col">Edit</th>
                             <th scope="col">Delete</th>

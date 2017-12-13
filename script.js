@@ -1,26 +1,30 @@
 $(document ).ready(function() {
 
     //get all the data on app startup
-    $('#createStudent').click(function(){
-        $('.studentForm').css("display", "block");
+    $('#createEmployee').click(function(){
+        $('.employeeForm').css("display", "block");
         $('#dynamicBtn').text('Save Changes')
     });
 
     $('#dynamicBtn').click(function(){
-        $('#creationStatus').html('<div class="alert alert-success"><strong>Success!</strong> Student was created.</div>').delay(2500).fadeOut('slow');
-        $('.studentForm').css("display", "none");
+        $('#creationStatus').html('<div class="alert alert-success"><strong>Success!</strong> Employee was created.</div>').delay(2500).fadeOut('slow');
+        $('.employeeForm').css("display", "none");
     });
 
     $('#cancel').click(function(){
-        $('.studentForm').css("display", "none");
+        $('.employeeForm').css("display", "none");
     });
 
-    $("tbody.tbodyData").on("click","td.editStudent", function(){
-        $('.studentForm').css("display", "block");
-        $('#dynamicBtn').text('Update Student')
+    $("tbody.tbodyData").on("click","td.editEmployee", function(){
+        $('.employeeForm').css("display", "block");
+        $('#dynamicBtn').text('Update Employee')
     });
-    $("tbody.tbodyData").on("click","td.deleteStudent", function(){
-        alert('delete student?');
+    $("tbody.tbodyData").on("click","td.deleteEmployee", function(){
+        alert('delete employee?');
     });
+
+    $( "#searchEmployee" ).change(function() {
+        console.log('You entered: ', $(this).val());
+      });
 
 });
