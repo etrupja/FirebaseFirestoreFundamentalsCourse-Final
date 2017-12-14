@@ -42,8 +42,8 @@
 
     </head>
     <body>
-        <div class="alert alert-primary text-center" id="dashboard" role="alert">
-             <h1> Employees Dashboard </h1>
+        <div class="alert alert-success text-center" id="dashboard" role="alert">
+             <h1> Employees DASHBOARD </h1>
         </div>
 
         <div class="container">
@@ -74,9 +74,10 @@
                 </div>
 
                 <!-- input to seach for an employee -->
-                <input class="btn btn-default  pull-right" placeholder="Search an employee..." id="searchEmployee"> </input>
+                <input class="btn btn-default  pull-right" placeholder="Search by name..." id="searchEmployee"> </input>
 
                 <div id="operationStatus"></div>
+
                 <div class="employeeForm">
                                 <div class="form-row">
                                   <div class="form-group col-md-4">
@@ -123,8 +124,8 @@
                                 </div>
                 </div>
         
-                <table class="table">
-                        <thead>
+                <table class="table table-striped">
+                        <thead class="thead-inverse">
                           <tr>
                             <th scope="col">First Name</th>
                             <th scope="col">Last Name</th>
