@@ -17,3 +17,11 @@
 div.dropdown-menu a{
     cursor: pointer;
 } 
+
+td.deleteEmployee{
+    cursor: pointer;
+}
+
+td.editEmployee{
+    cursor: pointer;
+}

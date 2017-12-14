@@ -13,8 +13,7 @@
         
         <!-- custom styles -->
         <link rel="stylesheet" href="styles.css" >
-        <!-- custom script -->
-        <script src="script.js"></script>
+        
        
         <!-- firebase related files -->
         <script src="https://www.gstatic.com/firebasejs/4.8.0/firebase.js"></script>
@@ -38,6 +37,8 @@
          <script src="initialize.js"></script>
         <!-- filtering scripts -->
         <script src="filter.js"></script>
+        <!-- custom script -->
+        <script src="script.js"></script>
 
     </head>
     <body>
@@ -59,14 +60,14 @@
                             data-toggle="dropdown" 
                             aria-haspopup="true" 
                             aria-expanded="false">
-                    Default Filters <i class="fa fa-filter" aria-hidden="true"></i>
+                    Default Employee Filters <i class="fa fa-filter" aria-hidden="true"></i>
                     </button>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" id="onlyMalesFilter"> Only male employees</a>
-                        <a class="dropdown-item" id="fullTimeFilter">  Only full time employees</a>
-                        <a class="dropdown-item" id="olderThenFilter"> Employees older than 23</a>
-                        <a class="dropdown-item" id="ageBetweenFilter"> Between 20 and 25 years old</a>
-                        <a class="dropdown-item" id="avgFilter"> Average between 4.5 and 5</a>
+                        <a class="dropdown-item" id="onlyMalesFilter"> Male only</a>
+                        <a class="dropdown-item" id="fullTimeFilter">  Full-time only</a>
+                        <a class="dropdown-item" id="olderThenFilter"> Older than 30</a>
+                        <a class="dropdown-item" id="ageBetweenFilter"> Older than 35, but younger than 50</a>
+                        <a class="dropdown-item" id="yearsOfExperienceFilter"> Female and 5 to 10 years of experience</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" id="clearFilter"> Clear Filter</a>
                     </div>
@@ -75,7 +76,7 @@
                 <!-- input to seach for an employee -->
                 <input class="btn btn-default  pull-right" placeholder="Search an employee..." id="searchEmployee"> </input>
 
-                <div id="creationStatus"></div>
+                <div id="operationStatus"></div>
                 <div class="employeeForm">
                                 <div class="form-row">
                                   <div class="form-group col-md-4">
@@ -100,20 +101,19 @@
                                         <div class="form-group col-md-4">
                                           <label for="gender">Gender</label>
                                           <select id="gender" class="form-control">
-                                            <option selected>Prefer not to answer</option>
                                             <option>Male</option>
                                             <option>Female</option>
                                           </select>
                                         </div>
                                         <div class="form-group col-md-4">
-                                          <label for="average">Average</label>
-                                          <input type="text" class="form-control" id="average">
+                                          <label for="yearsOfExperience">Years of Experience</label>
+                                          <input type="text" class="form-control" id="yearsOfExperience">
                                         </div>
                                 </div>
                                 <div class="form-group">
                                   <div class="form-check">
                                     <label class="form-check-label">
-                                      <input class="form-check-input" type="checkbox"> Check this if he/she is a full time employee.
+                                      <input class="form-check-input" type="checkbox" id="isFullTime"> Check this if he/she is a full time employee.
                                     </label>
                                   </div>
                                 </div>
